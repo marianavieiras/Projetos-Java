@@ -1,0 +1,42 @@
+package AbstractFactory;
+
+public class SanduichesIngredientFactoryRT implements SanduichesIngredientFactory{
+	
+	public static Sanduiche FactorySanduiche(String pao, String queijo, String presunto, String salada) {
+		
+		pao novo = new Tpao (" ");
+		if(pao.equals("P�o franc�s")) {
+			novo = new PaoFrances();
+		} else if(pao.equals("P�o integral")) {
+			paoNew = new PaoIntegral();
+		} else {
+			System.out.println("*** Valor de p�o inv�lido para essa lanchonete ***\n");
+		}
+		
+		TipoQueijo queijoNew = new TipoQueijo("");
+		
+		if(queijo.equals("Queijo prato")) {
+			queijoNew = new QueijoPrato();
+		} else if(queijo.equals("Queijo mussarela")) {
+			queijoNew = new QueijoMussarela();
+		} else {
+			System.out.println("*** Valor de queijo inv�lido para essa lanchonete ***\n");
+		}
+		
+		Presunto presuntoNew = new Presunto("");
+		if(presunto.equals("Presunto de frango")) {
+			presuntoNew = new PresuntoDeFrango();
+		} else {
+			System.out.println("*** Valor de presunto inv�lido para essa lanchonete ***\n");
+		}
+		
+		Salada saladaNew = new Salada("");
+		if(salada.equals("Salada com verdura")) {
+			saladaNew = new SaladaComVerdura();
+		} else {
+			System.out.println("*** Valor de salada inv�lido para essa lanchonete ***\n");
+		}
+		
+		return new Sanduiche(paoNew, queijoNew, presuntoNew, saladaNew, "RT");
+	}
+}

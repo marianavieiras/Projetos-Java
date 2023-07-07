@@ -1,0 +1,52 @@
+package principal;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class Supermercado {
+	private String nome;
+	private int ID;
+	private double preco;
+	private Set<Supermercado> produtos = new HashSet<Supermercado> ();
+	
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public int getID() {
+		return ID;
+	}
+
+	public void setID(int iD) {
+		ID = iD;
+	}
+
+	public double getPreco() {
+		return preco;
+	}
+
+	public void setPreco(double preco) {
+		this.preco = preco;
+	}
+	
+	// add produto somnte se não for igual
+	public void addProduto (Supermercado produto) {
+		if (produtos.contains(produto)) {
+			System.out.println ("Prduto já se encontra no sisteema");
+		} else {
+		produtos.add(produto);
+		}
+		}
+	
+	// for 
+	public void imprime () {
+		for (Supermercado nome:  produtos) {
+			
+		}
+	}
+	
+}

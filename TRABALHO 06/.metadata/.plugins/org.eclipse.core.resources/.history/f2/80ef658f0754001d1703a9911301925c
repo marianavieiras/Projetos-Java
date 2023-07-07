@@ -1,0 +1,23 @@
+package AbstractFactory;
+
+public class Sanduiche implements SanduichesIngredientFactory{
+	private Pao pao;
+	private Queijo queijo;
+	private Presunto presunto;
+	private Salada salada;
+	private String lanchonete;
+	
+	protected Sanduiche(Pao pao, Queijo queijo, Presunto presunto, Salada salada, String lanchonete) {
+		this.pao = pao;
+		this.queijo = queijo;
+		this.salada = salada;
+		this.presunto = presunto;
+		this.lanchonete = lanchonete;
+	}
+	
+	@Override
+	public String toString() {
+		return "Sanduiche da lanchonete: "+this.lanchonete+"\nP�o: "+this.pao.getTipoPao()+"\nQueijo: "+this.queijo.getTipoQueijo()+"\nPresunto: "+this.presunto.getTipoPresunto()
+		+"\nSalada: "+this.salada.getTipoSalada()+"\n";
+	}
+}

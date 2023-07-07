@@ -1,0 +1,36 @@
+package plantas.ufop.com;
+import java.util.Scanner;
+
+public class Plantas {
+public String planta;
+public int estoqueAtual, estoqueIdeal;
+
+public Plantas (String planta, int estoqueAtual, int estoqueIdeal) {
+	this.planta = planta;
+	this.estoqueAtual = estoqueAtual;
+	this.estoqueIdeal = estoqueIdeal;
+}
+
+public String planta () {
+	return planta ();
+	}
+public void setPlanta (String planta) {
+    this.planta = planta;
+}
+
+public int getEstoqueAtual () {
+	return estoqueAtual ();
+	}
+
+public void setEstoqueAtual (int estoqueAtual) {
+    this.estoqueAtual = estoqueAtual;
+}
+
+public int getEstoqueIdeal () {
+	return estoqueIdeal ();
+	}
+public void setEstoqueIdeal (int estoqueIdeal) {
+    this.estoqueIdeal = estoqueIdeal;
+}
+
+}

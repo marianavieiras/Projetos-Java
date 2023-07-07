@@ -1,0 +1,22 @@
+package grafos;
+import java.util.ArrayList;
+import java.util.LinkedList; 
+import java.util.List;
+
+
+public class Dados_grafos {
+	
+	List<Edge> arestas;
+	List<Vertex> vertice;
+	
+		
+	public Dados_grafos (){
+	this.vertice = new ArrayList<Vertex>;
+	this.arestas = new ArrayList<Edge>;
+		}
+	
+	public void addAdj (Dados_grafos a) {
+		this.adj.add(a);
+	}
+	
+}

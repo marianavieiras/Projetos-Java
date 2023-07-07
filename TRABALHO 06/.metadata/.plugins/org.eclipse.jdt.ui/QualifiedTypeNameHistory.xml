@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="formas.FormaGeometricaFactory"/>
+    <fullyQualifiedTypeName name="formas.FormaGeometrica"/>
+    <fullyQualifiedTypeName name="factory.Sanduiche"/>
+    <fullyQualifiedTypeName name="factory.LanchoneteCG"/>
+    <fullyQualifiedTypeName name="factory.Factory"/>
+    <fullyQualifiedTypeName name="Produto.SemSalada"/>
+    <fullyQualifiedTypeName name="Produto.PaoBola"/>
+    <fullyQualifiedTypeName name="Produto.Cheddar"/>
+    <fullyQualifiedTypeName name="Produto.Peru"/>
+    <fullyQualifiedTypeName name="AbstractFactory.FabricaDeSanduichesRT"/>
+    <fullyQualifiedTypeName name="AbstractFactory.Sanduiche"/>
+    <fullyQualifiedTypeName name="AbstractFactory.SanduichesIngredientFactory"/>
+    <fullyQualifiedTypeName name="AbstractFactory.SanduichesIngredientFactoryCG"/>
+    <fullyQualifiedTypeName name="AbstractFactory.SanduichesIngredientFactoryJP"/>
+    <fullyQualifiedTypeName name="java.util.Random"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+</qualifiedTypeNameHistroy>

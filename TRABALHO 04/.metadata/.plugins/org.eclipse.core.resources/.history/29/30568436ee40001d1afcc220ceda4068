@@ -1,0 +1,18 @@
+package principal;
+
+public class Main {
+	public static void main ( String args []) {
+	 Oficina o = new Oficina () ;
+	 Bicicleta b = new Bicicleta ();
+	 Automovel a = new Automovel ();
+	 
+	 o.v.add (a);
+	 o.v.add(b);
+	 
+	 o.proximo();
+	 o.manutencao(a);
+	 
+	 
+	}
+	
+}

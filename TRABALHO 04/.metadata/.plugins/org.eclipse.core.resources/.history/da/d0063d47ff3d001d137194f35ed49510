@@ -1,0 +1,12 @@
+package principal;
+
+public class Main {
+	public static void main(String[] args) {
+		String destinatario1 = "Maria";
+		String mensagem1 = "Te amo";
+		String data1 = "12/06/2022";
+		DiaDosNamorados namorado = new DiaDosNamorados (destinatario1, mensagem1, data1); 
+		
+	}
+
+}

@@ -1,0 +1,39 @@
+package exercicio7.ufop.com;
+import java.util.Scanner;
+
+
+public class Main {
+public static void main (String [] args) {
+Scanner teclado = new Scanner (System.in);
+Invoice produto = new Invoice();
+
+int num;
+String descricao;
+int qnt;
+float preco;
+
+System.out.println ("Adicione o numero do produto: ");
+num = teclado.nextInt();
+produto.setNum(num);
+
+System.out.println ("Descrição do produto: ");
+descricao = teclado.next();
+produto.setDescricao(descricao);
+
+System.out.println ("Quantidade do produto: ");
+qnt = teclado.nextInt();
+produto.setQnt(qnt);
+
+System.out.println ("Adicione o preço do produto: ");
+preco = teclado.nextFloat();
+produto.setPreco(preco);
+
+System.out.println ("Numero: "+ produto.getNum());
+System.out.println (produto.getDescricao());
+System.out.println("Quantidade: " + produto.getQnt());
+System.out.println ("Valor: " + produto.getPreco());
+System.out.println ("Fatura: " + produto.getInvoiceAmount());
+
+}
+}
+ 

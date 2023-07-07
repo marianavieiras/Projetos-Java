@@ -1,0 +1,63 @@
+package principal;
+
+public class Bicicleta extends Veiculo {
+	
+	 private int pneu; 
+	 private String freio; 
+	 private String corrente; 
+	 private String limpar;
+		 
+	 public int getPneu() {
+		return pneu;
+	}
+
+	public void setPneu(int pneu) {
+		this.pneu = pneu;
+	}
+
+	public String getFreio() {
+		return freio;
+	}
+
+	public void setFreio(String freio) {
+		this.freio = freio;
+	}
+	 
+	 public String getLimpar() {
+			return limpar;
+		}
+
+
+		public void setLimpar(String limpar) {
+			this.limpar = limpar;
+		}
+
+		public String getCorrente() {
+			return corrente;
+		}
+
+		public void setCorrente (String corrente) {
+			this.corrente = corrente;
+		}
+
+	 
+	
+	public void listaVerificacoes () {
+		this.pneu = 0;
+		this.freio = "Desregulado";
+		this.corrente = "Com defeito";
+				
+	}
+	
+	public  void ajustar () {
+		this.pneu = 2;
+		this.freio = "Ajustado";
+		this.corrente = "Corrigido";
+		
+	}
+	
+	public void limpar() {
+		this.limpar = "Veiculo lavado";
+		
+	}
+}

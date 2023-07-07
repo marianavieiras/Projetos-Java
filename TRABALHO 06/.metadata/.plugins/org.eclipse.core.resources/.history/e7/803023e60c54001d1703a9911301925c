@@ -1,0 +1,40 @@
+package AbstractFactory;
+
+public class SanduichesIngredientFactoryCG implements iSanduichesIngredientFactory{
+	public static Sanduiche FactorySanduiche(String pao, String queijo, String presunto, String salada) {
+		Pao paoNew = new Pao("");
+		if(pao.equals("P�o franc�s")) {
+			paoNew = new PaoFrances();
+		} else if(pao.equals("P�o bola")) {
+			paoNew = new PaoBola();
+		} else {
+			System.out.println("*** Valor de p�o inv�lido para essa lanchonete ***\n");
+		}
+		
+		Queijo queijoNew = new Queijo("");
+		
+		if(queijo.equals("Queijo cheddar")) {
+			queijoNew = new QueijoCheddar();
+		} else if(queijo.equals("Queijo mussarela")) {
+			queijoNew = new QueijoMussarela();
+		} else {
+			System.out.println("*** Valor de queijo inv�lido para essa lanchonete ***\n");
+		}
+		
+		Presunto presuntoNew = new Presunto("");
+		if(presunto.equals("Presunto de peru")) {
+			presuntoNew = new PresuntoDePeru();
+		} else {
+			System.out.println("*** Valor de presunto inv�lido para essa lanchonete ***\n");
+		}
+		
+		Salada saladaNew = new Salada("");
+		if(salada.equals("Salada com verdura")) {
+			saladaNew = new SaladaComVerdura();
+		} else {
+			System.out.println("*** Valor de salada inv�lido para essa lanchonete ***\n");
+		}
+		
+		return new Sanduiche(paoNew, queijoNew, presuntoNew, saladaNew, "CG");
+	}
+}

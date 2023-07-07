@@ -1,0 +1,9 @@
+package factory;
+
+public class LanchoneteCG extends Factory{
+	 @Override
+	    public Sanduiche FactorySanduiche () {
+	        return new Sanduiche("Pãi italiano", "Mussarela", "Peru", "Rucula", "CG");
+	    }
+
+}

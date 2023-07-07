@@ -1,0 +1,84 @@
+package principal;
+
+public class Automovel extends Veiculo {
+	
+	 private int pneu; 
+	 private String oleo;
+	 private String alinhar; 
+	 private String motor; 
+	 private String limpar;
+		 
+	 public int getPneu() {
+		return pneu;
+	}
+
+	public void setPneu(int pneu) {
+		this.pneu = pneu;
+	}
+
+	public String getOleo() {
+		return oleo;
+	}
+
+	public void setOleo(String oleo) {
+		this.oleo = oleo;
+	}
+
+	public String getAlinhar() {
+		return alinhar;
+	}
+
+	public void setAlinhar(String alinhar) {
+		this.alinhar = alinhar;
+	}
+	 
+	 public String getLimpar() {
+			return limpar;
+		}
+
+
+		public void setLimpar(String limpar) {
+			this.limpar = limpar;
+		}
+
+		public String getMotor() {
+			return motor;
+		}
+
+		public void setMotor(String motor) {
+			this.motor = motor;
+		}
+
+	 
+	
+	public void listaVerificacoes () {
+		this.pneu = 0;
+		this.alinhar = "Desregulado";
+		this.motor = "Com defeito";
+				
+	}
+	
+	public  void ajustar () {
+		this.pneu = 4;
+		this.alinhar = "Alinhado";
+		this.motor = "Corrigido";
+		
+	}
+	
+	public void limpar() {
+		this.limpar = "Veiculo lavado";
+		
+	}
+	public void mudarOleo() {
+		this.oleo = "Oleo novo adicionado";
+		
+	}
+
+
+
+
+
+	
+	
+	
+}

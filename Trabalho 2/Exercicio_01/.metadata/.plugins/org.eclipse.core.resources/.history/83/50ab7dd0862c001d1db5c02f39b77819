@@ -1,0 +1,14 @@
+package grafos;
+import java.util.ArrayList;
+import java.util.LinkedList; 
+import java.util.List;
+
+public class Edge {
+	Vertex origin;
+	Vertex destiny;
+	public Edge (Vertex origin, Vertex destiny) {
+		this.origin = origin;
+		this.destiny = destiny;
+	}
+
+}

@@ -1,0 +1,27 @@
+package principal;
+import java.util.ArrayList;
+import java.util.Random;
+
+
+public class Oficina  {
+	public ArrayList <Veiculo> v = new ArrayList <> ();
+	
+	
+	public Veiculo proximo () {
+		Random rand = new Random ();
+		int i = rand.nextInt(2);
+		return v.get(i);
+		
+	}
+	
+	public void manutencao (Veiculo v) {
+		v.limpar();
+		v.ajustar();
+		v.listaVerificacoes();
+		if (v instanceof Automovel) {
+			((Automovel) v).mudarOleo();
+		}
+	}
+
+
+}

@@ -1,0 +1,31 @@
+package principal;
+
+public class Main {
+	public static void main(String[] args) {
+		String destinatario1 = "João";
+		String data1 = "12/06/2022";
+		String remetente1 = "Maria";
+		DiaDosNamorados namorado = new DiaDosNamorados (destinatario1, remetente1, data1); 
+		namorado.showMessage();
+		
+		System.out.println ("____________________________________");
+		String destinatario2 = "Mamãe";
+		String data2 = "25/12/2022";
+		String remetente2 = "João Pedro";
+		Natal mamae = new Natal (destinatario2, remetente2, data2); 
+		mamae.showMessage();
+		
+		System.out.println ("____________________________________");
+		String destinatario3 = "Mariana";
+		String data3 = "06/10/2022";
+		String remetente3 = "Maria Eduarda";
+		Aniversario amiga = new Aniversario (destinatario3, remetente3, data3); 
+		amiga.showMessage();
+	}
+	
+	}
+	
+	
+	
+
+

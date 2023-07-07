@@ -1,0 +1,18 @@
+import java.util.ArrayList;
+import java.util.LinkedList; 
+import java.util.List;
+
+public class Vertex {
+	int vertice;
+	List <Vertex> adj;
+		
+	public Vertex (int vertice){
+	this.vertice = vertice;
+	this.adj = new LinkedList<Vertex>();
+		}
+	
+	public void addAdj (Vertex a) {
+		this.adj.add(a);
+	}
+	
+}

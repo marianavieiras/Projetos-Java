@@ -1,0 +1,5 @@
+package AbstractFactory;
+
+public abstract class Factory {
+    public abstract Sanduiche FactorySanduiche();
+}

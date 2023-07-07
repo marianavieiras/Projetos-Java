@@ -1,0 +1,26 @@
+package principal;
+
+public class Natal extends CartaoWeb {
+			
+		private String Data;
+			
+		public Natal (String destinatario, String Data) {
+			setDestinatario (destinatario);
+			this.Data = Data;
+		}
+
+		public String getData() {
+			return Data;
+		}
+
+		public void setData(String data) {
+			this.Data = data;
+		}
+		
+		public String showMessage( String remetente) {
+			return "Para: " + getDestinatario() + "\nPapai Noel deixou o presente dabaixo da arvore e desejou um Feliz Natal HO-HO-HO !!!" + "\nDe: " + remetente +"\n"+ this.Data;
+			  
+		}
+	}
+
+

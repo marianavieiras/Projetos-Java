@@ -1,0 +1,24 @@
+package fabrica;
+
+public class Cliente {
+	public static void main(String[] args) {
+		try {			
+			FabricaFiat fiat = new FabricaFiat();
+			CarroSedan sedan = fiat.criarCarroSedan("Siena");
+			sedan.exibirInfoSedan();
+			
+			CarroPopular popular = fiat.criarCarroPopular("Palio");
+			popular.exibirInfoPopular();
+			
+			
+			FabricaFord fabrica = new FabricaFord();
+			CarroSedan sedan = fabrica.criarCarroSedan("Fiesta Sedan");
+			sedan.exibirInfoSedan();
+			
+			Popular popularFord = fabricaFord.criarCarroPopular("Fiesta");
+			popularFord.exibirInfoPopular();
+		} catch(Exception e) {
+			System.out.println("Ocorreu um problema na execu��o!");
+		}
+	}
+}

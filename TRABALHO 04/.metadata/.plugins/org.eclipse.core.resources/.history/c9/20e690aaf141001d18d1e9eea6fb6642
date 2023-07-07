@@ -1,0 +1,35 @@
+package principal;
+import java.util.ArrayList;
+import java.util.Random;
+
+public class Main {
+
+	public ArrayList <CartaoWeb> c = new ArrayList <> ();
+	public CartaoWeb proximo () {
+		Random rand = new Random ();
+		int i = rand.nextInt(3);
+		return c.get(i);
+		
+	}
+	
+	public void cartaozinho (CartaoWeb c) {
+		if (c instanceof DiaDosNamorados) {
+		DiaDosNamorados namorado = new DiaDosNamorados (null, null, "12/06/2022"); 
+		namorado.showMessage();}
+		else if (c instanceof Natal) {		
+		System.out.println ("____________________________________");
+		
+		Natal mamae = new Natal (null, null, "25/12/2022"); 
+		mamae.showMessage();}
+		else if (c instanceof Aniversario) {
+		
+		Aniversario amiga = new Aniversario (null, null,  "06/10/2022"); 
+		amiga.showMessage();
+	}
+	}
+	}
+	
+	
+	
+
+

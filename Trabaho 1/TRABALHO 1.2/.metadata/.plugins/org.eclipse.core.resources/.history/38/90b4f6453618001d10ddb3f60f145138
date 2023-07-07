@@ -1,0 +1,47 @@
+package plantas.ufop.com;
+import java.util.Scanner;
+
+public class Main {
+	public static void CadastroPlanta () {
+		int i;
+		Plantas especie [] = new Plantas [5];
+		Scanner teclado = new Scanner(System.in);
+		String plantas;
+		int estoqueAtual, estoqueIdeal;
+		 System.out.println("------------Floricultura------------- ");
+		for (i=0; i<5; i++) {
+			System.out.println ("Adicione o nomme da planta: ");
+			plantas = teclado.next();
+			
+			System.out.println("Adicione o estoque ideal: ");
+			estoqueIdeal = teclado.nextInt ();
+			
+			System.out.println ("Adicione o estoque atual: ");
+			estoqueAtual = teclado.nextInt();
+			System.out.println("________________________________________________________ ");
+			
+			 Plantas planta = new Plantas(plantas, estoqueIdeal, estoqueAtual);
+	         especie[i] = planta;
+
+						
+		}
+		 Estoque (especie);
+		
+	}
+	public static void Estoque (Plantas especie []) {
+		
+		for (int j = 0; j<especie.length; j++) {
+		if (especie[j].getEstoqueIdeal() < estoque[j].getEstoqueAtual()) {
+			int est_necessario = especie[j].getEstoqueAtual() - especie[j].getEstoqueIdeal(); 
+			System.out.println("Planta: "+especie[j].getplantas);
+			System.out.println("Comprar: "+est_necessario);
+		}
+			
+		}
+		
+	}
+	public static void main(String[] args) throws Exception {
+		CadastroPlanta();
+	}
+
+}

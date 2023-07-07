@@ -1,0 +1,43 @@
+package principal;
+import java.util.ArrayList;
+import java.util.Random;
+
+public class Main {
+
+	public ArrayList <CartaoWeb> c = new ArrayList <> ();
+	public CartaoWeb proximo () {
+		Random rand = new Random ();
+		int i = rand.nextInt(3);
+		return c.get(i);
+		
+	}
+	
+	public void cartaozinho (CartaoWeb c) {
+		if (c instanceof DiaDosNamorados) {
+		String destinatario1 = "João";
+		String data1 = "12/06/2022";
+		String remetente1 = "Maria";
+		DiaDosNamorados namorado = new DiaDosNamorados (destinatario1, remetente1, data1); 
+		namorado.showMessage();}
+		else if (c instanceof Natal) {		
+		System.out.println ("____________________________________");
+		String destinatario2 = "Mamãe";
+		String data2 = "25/12/2022";
+		String remetente2 = "João Pedro";
+		Natal mamae = new Natal (destinatario2, remetente2, data2); 
+		mamae.showMessage();}
+		else if (c instanceof Aniversario) {
+		System.out.println ("____________________________________");
+		String destinatario3 = "Mariana";
+		String data3 = "06/10/2022";
+		String remetente3 = "Maria Eduarda";
+		Aniversario amiga = new Aniversario (destinatario3, remetente3, data3); 
+		amiga.showMessage();
+	}
+	}
+	}
+	
+	
+	
+
+

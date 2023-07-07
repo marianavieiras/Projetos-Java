@@ -1,0 +1,13 @@
+package fabrica;
+
+public class FabricaDeCarro {
+	public CarroSedan criarCarroSedan(String carro) {
+		return new CarroSedan (carro);
+	}
+	public Popular criarCarroPopular(String carro) {
+		return new Popular(carro);
+	}
+	
+	
+
+}

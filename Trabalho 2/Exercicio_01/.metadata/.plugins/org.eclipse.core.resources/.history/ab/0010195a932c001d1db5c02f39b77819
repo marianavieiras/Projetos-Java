@@ -1,0 +1,39 @@
+package grafos;
+
+public class Grafos {
+
+	private boolean[][] posicao;
+	
+	public Grafos (int tam) {
+	 posicao = new boolean [tam][tam];
+	}
+	//definir vizinhos
+	public void Vizinhos (int num1, int num2) {
+		if (posicao[num1][num2] ==  true || num1 == num2) {
+			System.out.println ("Posições invalidas!!!");
+		} else {
+			posicao [num2][num1] = true;
+			posicao [num1][num2] = true;
+		}
+	}
+ 
+  //listar vizinhos 
+	public void Listar (int vertice) {
+		System.out.println("Vizinhos: ");
+		for (int i= 0; i<posicao.length; i++) {
+			if (posicao[vertice][i] == true) {
+				System.out.println(i);
+			}
+					}
+	}
+ 
+ //mostrar matriz
+	public void Matriz () {
+		for (int i = 0; i<posicao.length; i++) {
+			for (int j = 0; j<posicao.length; j++) {
+				System.out.println(posicao[i][j]);
+			}
+			System.out.println ("\n\n");
+		}
+	}
+}

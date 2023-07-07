@@ -1,0 +1,47 @@
+package principal;
+
+public class Main extends Number{
+
+	public static void main(String[] args) {
+		System.out.println ("Diferente:");
+		
+		Number num1 = new Number();
+		
+		num1.setNumero(2);
+		num1.toString();
+		num1.getValue();
+		System.out.println (num1.hashCode());
+		
+		Number num2 = new Number ();
+		
+		num2.setNumero(1);
+		num2.toString();
+		System.out.println (" "+num1);
+		System.out.println (num2.hashCode());
+		System.out.println (" "+num2);
+		System.out.println (num1.equals(num2));
+		
+		
+		System.out.println ("____________________________\n");
+		System.out.println ("Igual:");
+		
+		Number num3 = new Number();
+		
+		num3.setNumero(3);
+		num3.toString();
+		num3.getValue();
+		System.out.println (" "+num3);
+		System.out.println (num3.hashCode());
+		
+		Number num4 = new Number ();
+		
+		num4.setNumero(3);
+		num4.toString();
+		System.out.println (" "+num4);
+		System.out.println (num4.hashCode());
+		System.out.println (num4.equals(num3));
+		
+				
+	
+	}
+}

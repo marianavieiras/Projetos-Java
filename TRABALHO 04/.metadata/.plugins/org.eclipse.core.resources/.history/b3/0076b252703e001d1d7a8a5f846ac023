@@ -1,0 +1,18 @@
+package principal;
+
+public class Main extends Number{
+
+	public static void main(String[] args) {
+		
+		Number num1 = new Number();
+		num1.setNumero(1);
+		num1.toString();
+		Number num2 = new Number ();
+		num2.setNumero(1);
+		num2.toString();
+		
+		
+				
+	
+	}
+}

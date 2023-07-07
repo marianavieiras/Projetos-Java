@@ -1,0 +1,27 @@
+package principal;
+
+public class DiaDosNamorados extends CartaoWeb{
+	
+	private String Data;
+		
+	public DiaDosNamorados (String destinatario, String mensagem, String Data) {
+		super ();
+		this.destinatario = destinatario; 
+		this.mensagem = mensagem; 
+		this.setData(Data);
+	}
+
+	public String getData() {
+		return Data;
+	}
+
+	public void setData(String data) {
+		Data = data;
+	}
+	void showMessage () {
+	System.out.println ("Destinataio: " +super.destinatario ); 
+	System.out.println (" " +super.mensagem ); 
+	System.out.println ("_______________________"+this.Data);
+	}
+
+}

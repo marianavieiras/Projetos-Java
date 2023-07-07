@@ -1,0 +1,61 @@
+package exercicio10.ufop.com;
+
+import java.util.Scanner;
+
+public class Main { public static void main(String[] args) {
+
+    int numero, auxNumero, cont = 0;
+
+    Scanner ler = new Scanner(System.in);
+
+    System.out.print("Digite o numero que deseja decompor: ");
+    numero = ler.nextInt();
+    auxNumero = numero;
+    
+    while (auxNumero != 1) {
+
+        for (int i = 2; i <= auxNumero; i++ ) {
+            if (auxNumero % i == 0) {
+
+                if (fatorar(i)) break;
+                cont++;
+                auxNumero = auxNumero / i;
+            }
+        }
+    }
+
+    int[] fatoresPrimos = new int[cont];
+    cont = 0;
+
+    while (numero != 1) {
+
+        for (int i = 2; i <= numero; i++ ) {
+            if (numero % i == 0) {
+
+                if (fatorar(i)) break;
+                numero = numero / i;
+                fatoresPrimos[cont] = i;
+                cont++;
+            }
+        }
+    }
+
+    System.out.println("Fatores primos: ");
+
+    for (int fatoresPrimo : fatoresPrimos) {
+        System.out.println(fatoresPrimo);
+    }
+
+}
+
+private static boolean fatorar(int i) {
+    if (i != 2 && i % 2 == 0) {
+        return true;
+    } else if (i != 3 && i % 3 == 0) {
+        return true;
+    } else if (i != 5 && i % 5 == 0) {
+        return true;
+    } else return i != 7 && i % 7 == 0;
+}
+}
+

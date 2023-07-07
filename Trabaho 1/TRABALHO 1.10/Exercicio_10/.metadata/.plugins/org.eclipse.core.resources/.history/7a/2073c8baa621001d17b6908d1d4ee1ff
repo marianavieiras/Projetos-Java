@@ -1,0 +1,36 @@
+package exercicio10.ufop.com;
+
+import java.util.Scanner;
+
+package exercicio10.ufop.com;
+
+import java.util.Scanner;
+
+public class Main {	
+	 
+		public static void main(String[] args) {
+		
+		int numero, primo=0;
+
+	    Scanner entrada = new Scanner(System.in);
+	     System.out.println("Adicione um numero: ");
+	   numero = entrada.nextInt();
+
+	    for (int i=0; i<=numero; i++) {
+	        for (int j=1; j<=i; j++) {
+	            if (i % j == 0) {
+	                primo++;
+	            
+	        }
+	        if (primo == 2) {
+	            System.out.println("O número " + i + " é PRIMO!");
+	        }
+	       }
+	    }
+
+	    entrada.close();
+
+
+	}
+	}
+

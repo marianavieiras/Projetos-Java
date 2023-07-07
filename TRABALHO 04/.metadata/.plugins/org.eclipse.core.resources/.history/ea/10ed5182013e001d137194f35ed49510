@@ -1,0 +1,34 @@
+package principal;
+
+public class Main {
+	public static void main(String[] args) {
+		String destinatario1 = "João";
+		String mensagem1 = "Feliz dia dos Namorados e não esqueça de lavar a louça hoje, Te amo!!!";
+		String data1 = "12/06/2022";
+		String remetente1 = "Maria";
+		DiaDosNamorados namorado = new DiaDosNamorados (destinatario1, data1); 
+		System.out.println (namorado.showMessage(mensagem1, remetente1));
+		
+		System.out.println ("____________________________________");
+		String destinatario2 = "Mamãe";
+		String mensagem2 = "Papai Noel deixou o presente dabaixo da arvore e desejou um Feliz Natal HO-HO-HO !!!";
+		String data2 = "25/12/2022";
+		String remetente2 = "João Pedro";
+		Natal mamae = new Natal (destinatario2, data2); 
+		System.out.println (mamae.showMessage(mensagem2, remetente2));
+		
+		System.out.println ("____________________________________");
+		String destinatario3 = "Mariana";
+		String mensagem3 = "Que Deus continue te abençoando com muita paz, saúde e felicidades. Feliz Aniversario!!!";
+		String data3 = "14/10/2022";
+		String remetente3 = "Maria Eduarda";
+		Aniversario amiga = new Aniversario (destinatario3, data3); 
+		System.out.println (amiga.showMessage(mensagem3, remetente3));
+	}
+	
+	}
+	
+	
+	
+
+}

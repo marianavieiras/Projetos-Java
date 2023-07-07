@@ -1,0 +1,37 @@
+package principal;
+
+import java.util.Objects;
+
+public class Number {
+	private int Numero;
+
+	public void setNumero(int numero) {
+		Numero = numero;
+	}
+	public int getValue() {
+		return Numero;
+	}
+	
+
+	public int hashCode() {
+		return Objects.hash(Numero);
+	}
+
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Number other = (Number) obj;
+		return Numero == other.Numero;
+	}
+
+	
+	public String toString() {
+	return "Number [Numero=" + Numero + "]";
+}
+
+
+}

@@ -1,0 +1,37 @@
+package principal;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+/* O programa irá apresentar erro, pois sem as exeções tratadas e seja adicionado um valor invalido 
+retornara um erro definido dentro dos metedos*/ 
+public class Main {
+	public static void main(String[] args) {
+		Calculator cal= new Calculator();
+				
+		Scanner teclado = new Scanner(System.in);
+		
+		System.out.println("Escolha uma opção: ");
+		System.out.println("\n1.Divisão \n2.Log10");
+		int op = teclado.nextInt();
+		
+		switch(op) {
+			case 1:
+						
+					System.out.println("Informe o primeiro valor:");
+					double a = teclado.nextDouble();
+					System.out.println("Informe o  segundo valor:");
+					double b = teclado.nextDouble();
+					System.out.println(cal.divisao(a, b));
+				
+				break;
+			case 2:
+					System.out.println("Informe um valor: ");
+					double c = teclado.nextDouble();
+					System.out.println(cal.log10(c));
+				
+				break;
+			default:
+				System.out.println("Erro");
+		}
+	}
+}

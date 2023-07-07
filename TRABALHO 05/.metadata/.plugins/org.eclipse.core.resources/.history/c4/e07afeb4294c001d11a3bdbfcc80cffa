@@ -1,0 +1,12 @@
+package principal;
+
+public class Calculator {
+	
+	double divisao (double a, double b) {
+           return a / b;
+    }
+
+        return Math.log10(a);
+    }
+
+}

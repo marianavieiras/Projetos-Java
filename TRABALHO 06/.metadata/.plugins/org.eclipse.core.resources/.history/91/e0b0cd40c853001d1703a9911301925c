@@ -1,0 +1,28 @@
+package fabrica;
+
+public class CarroPopular {
+
+	private String carro;
+	private Palio carro_Palio;
+	private Fiesta carro_Fiesta;
+	
+	public CarroPopular(String carro, String fabrica) {
+		this.carro = carro;
+		if(carro.equals("Palio")) {
+			carro_Palio = new Palio();
+		} else if(carro.equals("Fiesta")) {
+			carro_Fiesta = new Fiesta(fabrica);
+		} 
+	}
+	
+	public void exibirInfoPopular() {
+		if(carro.equals("Palio")) {			
+			carro_Palio.exibirInfoSedan();
+		} else if(carro.equals("Fiesta")) {
+			carro_Fiesta.exibirInfoSedan();
+		} else {
+			System.out.println("Valor inv�lido.");
+		}
+	}
+
+}

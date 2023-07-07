@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\Cliente\Documents\PROG II\TRABAHO 1.10\.metadata\.plugins\org.eclipse.jdt.core
+336801130.index
+1865797976.index
+2137982620.index

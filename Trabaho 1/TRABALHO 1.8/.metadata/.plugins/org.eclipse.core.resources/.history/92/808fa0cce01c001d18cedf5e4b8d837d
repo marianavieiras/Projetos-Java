@@ -1,0 +1,78 @@
+package ufop.com.br;
+
+public class IntegerSet {
+	private boolean set[] = new boolean[101];
+	
+	//contrutor
+	public IntegerSet(int a[]) {
+		for (int i = 0; i < set.length; i++) {
+			for (int j = 0; j < a.length; j++) {
+				if (a[j] == i)
+					set[i] = true;
+			}
+		}	
+	}
+	
+	//métodos
+//	public void montaSet(int x[]) {
+//		for (int id : x)
+//			set[id] = true;
+//	}
+	
+	public static void union(boolean set1[], boolean set2[]) {
+		//boolean setUnion[] = new boolean[101];
+		String strUnion = "";
+		for (int i = 0; i < set1.length; i++) {
+			if (set1[i] || set2[i]) 
+				strUnion = strUnion + i + " ";
+		}
+		System.out.printf("\n\nResultado da união:\n%s", strUnion);
+	}
+	
+	public static void intersection(boolean set1[], boolean set2[]) {
+		//boolean setIntersection[] = new boolean[101];
+		String strIntersection = "";
+		for (int i = 0; i < set1.length; i++) {
+			if (set1[i] && set2[i]) 
+				strIntersection = strIntersection + i + " ";
+		}
+		System.out.printf("\n\nResultado da intersecção:\n%s", strIntersection);
+	}
+	
+	public void insertElement(int i, boolean set1[]) {
+		set1[i] = true;
+	}
+	
+	public void deleteElement(int i, boolean set1[]) {
+		set1[i] = false;
+	}
+	
+	public String toSetString(int set1[]) {
+		String str = "";
+		int colunas = 0;
+		for (int i = 0; i < set.length; i++) {
+			if (set1[i] == i) {
+				str = str + i + " ";
+			}
+			else {
+				str = str + "-- ";
+			}
+			colunas++;
+			if (colunas % 10 == 0)
+				str = str + "\n";
+		}
+		return str;
+	}
+	
+	public boolean isEqualTo(boolean set1[], boolean set2[]) {
+		boolean saoIguais = true;
+		while (saoIguais) {
+			for (int i = 0; i < set1.length; i++) {
+				if (set1[i] != set2[i]) 
+					saoIguais = false;
+			}
+		}
+		return saoIguais;
+	}
+}
+}

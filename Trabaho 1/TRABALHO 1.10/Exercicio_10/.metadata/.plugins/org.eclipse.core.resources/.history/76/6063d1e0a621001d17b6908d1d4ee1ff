@@ -1,0 +1,53 @@
+package exercicio10.ufop.com;
+
+import java.util.Scanner;
+
+public class App {
+    
+    
+    public static int divisores(int n, int d) {
+        int cont = 0;
+        if (d <= n) {
+            if (n % d == 0) {
+                cont++;
+                n /= d;
+                divisores(n, d);
+            } else {
+                d++;
+                divisores(n, d);
+            }
+        } else {
+            return cont;
+        }
+        return 0;
+    }
+
+    public static int[] fatores(int n) {
+        int x = divisores(n, 2), y = 2;
+        int fatoracao[] = new int[x];
+        for (int i = 0; i < fatoracao.length; i++) {
+            while (n % y == 0) {
+                fatoracao[i] = y;
+                i++;
+                n /= y;
+            }
+            y++;
+        }
+        return fatoracao;
+    }
+
+    public static void main(String[] args) throws Exception {
+        Scanner teclado = new Scanner(System.in);
+
+        System.out.println("Informe seu numero a ser fatorado");
+        int n = teclado.nextInt();
+        int fatoracao[] = fatores(n);
+        System.out.println("Resultado da fatoracao");
+        for (int i = 0; i < fatoracao.length; i++) {
+            System.out.println(fatoracao[i]+",");
+        }
+
+        teclado.close();
+    }
+}
+

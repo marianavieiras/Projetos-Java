@@ -1,0 +1,8 @@
+package fabrica;
+
+public class Palio {
+	public void exibirInfoSedan() {
+		System.out.println("Modelo: Palio");
+		System.out.println("Fabricado por: Fiat\n");
+	}
+}

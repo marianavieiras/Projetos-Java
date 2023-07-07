@@ -1,0 +1,15 @@
+package principal;
+
+public class ContaExcecao extends Exception {
+	private String mensagem;
+	private double saldo;
+	
+	public ContaExcecao(String msg, double saldo) {
+		this.mensagem = msg;
+		this.saldo = saldo;
+	}
+
+	public String getMensagem() {
+		return mensagem + "\nSaldo: "+this.saldo;
+	}
+}

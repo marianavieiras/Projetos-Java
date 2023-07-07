@@ -1,0 +1,30 @@
+package principal;
+
+public class Main {
+	public static void main(String[] args) {
+		someMethod(1,0);
+		
+		someMethod(2,2);
+	}
+
+	public static void someMethod(int a, int b) {
+		try {			
+			someMethod2(a, b);
+		} catch(ArithmeticException e) {
+			 System.out.println("Um erro ocorreu someMethod!");
+			e.printStackTrace();
+		}
+	}
+	
+	public static void someMethod2(int a, int b) throws ArithmeticException{
+		double result;
+		
+		try {
+			result = a/b;
+			System.out.println ("Resultado: " +result);
+		} catch (ArithmeticException e) {
+			 System.out.println("Um erro ocorreu someMethod!");
+			e.printStackTrace();
+		}
+	}
+}

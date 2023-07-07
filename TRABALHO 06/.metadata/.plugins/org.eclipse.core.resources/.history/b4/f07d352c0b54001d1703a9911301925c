@@ -1,0 +1,54 @@
+package AbstractFactory;
+import Produto.TipoPao;
+import Produto.TipoPresunto;
+import Produto.TipoQueijo;
+import Produto.TipoSalada;
+import Produto.PaoFrances;
+import Produto.PaoIntegral;
+import Produto.Frango;
+import Produto.Mussarela;
+import Produto.Prato;
+import Produto.ComSalada;
+import Produto.SemSalada;
+
+public class SanduichesIngredientFactoryJP {
+	public class SanduichesIngredientFactoryJP implements SanduichesIngredientFactory{
+		public static Sanduiche FactorySanduiche(String pao, String queijo, String presunto, String salada) {
+			Pao paoNew = new Pao("");
+			if(pao.equals("P�o integral")) {
+				paoNew = new PaoIntegral();
+			} else if(pao.equals("P�o bola")) {
+				paoNew = new PaoBola();
+			} else {
+				System.out.println("*** Valor de p�o inv�lido para essa lanchonete ***\n");
+			}
+			
+			Queijo queijoNew = new Queijo("");
+			
+			if(queijo.equals("Queijo cheddar")) {
+				queijoNew = new QueijoCheddar();
+			} else if(queijo.equals("Queijo prato")) {
+				queijoNew = new QueijoPrato();
+			} else {
+				System.out.println("*** Valor de queijo inv�lido para essa lanchonete ***\n");
+			}
+			
+			Presunto presuntoNew = new Presunto("");
+			if(presunto.equals("Presunto de peru")) {
+				presuntoNew = new PresuntoDePeru();
+			} else {
+				System.out.println("*** Valor de presunto inv�lido para essa lanchonete ***\n");
+			}
+			
+			Salada saladaNew = new Salada("");
+			if(salada.equals("Salada sem verdura")) {
+				saladaNew = new SaladaSemVerdura();
+			} else {
+				System.out.println("*** Valor de salada inv�lido para essa lanchonete ***\n");
+			}
+			
+			return new Sanduiche(paoNew, queijoNew, presuntoNew, saladaNew, "JP");
+		}
+	}
+
+}

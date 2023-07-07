@@ -1,0 +1,14 @@
+package principal;
+
+public class Main {
+	public static void main(String[] args) {
+		String destinatario1 = "Maria";
+		String mensagem1 = "Te amo";
+		String data1 = "12/06/2022";
+		String remetente1 = "João";
+		DiaDosNamorados namorado = new DiaDosNamorados (destinatario1, data1); 
+		System.out.println (namorado.showMessage(mensagem1, remetente1));
+	}
+	
+
+}

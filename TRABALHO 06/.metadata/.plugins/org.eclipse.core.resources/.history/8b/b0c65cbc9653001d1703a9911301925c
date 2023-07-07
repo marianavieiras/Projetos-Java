@@ -1,0 +1,9 @@
+package factory;
+
+public class LanchoneteRT extends Factory {
+	 @Override
+	    public Sanduiche FactorySanduiche () {
+	        return new Sanduiche("Pão integral", "Prato", "Parma", "De alface", "RT");
+	    }
+
+}

@@ -1,0 +1,18 @@
+package formas;
+
+public class FormaGeometricaFactory {
+	public static FormaGeometrica FactoryFormaGeometrica (String formaGeometrica) {
+		
+		if(formaGeometrica.equals("Circulo")) {
+			return new Circulo();
+		} else if(formaGeometrica.equals("Quadrado")) {
+			return new Quadrado();
+		} else if(formaGeometrica.equals("Triangulo")) {
+			return new Triangulo();
+		} else {
+			System.out.println("Forma geometrica não encontrada");
+			return new FormaGeometrica(formaGeometrica);
+		}
+	}
+
+}

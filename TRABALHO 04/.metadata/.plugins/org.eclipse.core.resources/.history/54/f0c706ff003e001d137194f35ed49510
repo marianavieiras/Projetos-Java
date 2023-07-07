@@ -1,0 +1,14 @@
+package principal;
+
+public class Main {
+	public static void main(String[] args) {
+		String destinatario1 = "João";
+		String mensagem1 = "Feliz dia dos Namorados e não esqueça de lavar a louça hoje, Te amo!!!";
+		String data1 = "12/06/2022";
+		String remetente1 = "Maria";
+		DiaDosNamorados namorado = new DiaDosNamorados (destinatario1, data1); 
+		System.out.println (namorado.showMessage(mensagem1, remetente1));
+	}
+	
+
+}

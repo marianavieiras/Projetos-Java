@@ -1,0 +1,27 @@
+package principal;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+	public class Metodo {
+		public static void main(String[] args) {
+			try {			
+				divisao();
+			} catch(ArithmeticException e) {
+				System.out.println("Valor inserido no denominador incorreto.");
+			}
+		}
+		
+		public static void divisao() throws ArithmeticException{
+			Scanner sc = new Scanner(System.in);
+			try {
+				System.out.println("Informe o valor do nominador: ");
+				int a = sc.nextInt();
+				System.out.println("Informe o valor do denominador: ");
+				int b = sc.nextInt();
+				System.out.println("O resultado "+a/b);
+			}catch (ArithmeticException e) {
+		        System.out.println("Operacao invalida!!!");
+			}
+		}
+	}
